@@ -22,7 +22,10 @@ document.addEventListener('DOMContentLoaded', function() {
         // Create a new remove button
         const removeButton = document.createElement('button');
         removeButton.textContent = "Remove";
-        removeButton.className = 'remove-btn';
+
+        // Add CSS classes to the elements
+        newTask.classList.add('task-item');
+        removeButton.classList.add('remove-btn');
 
         // Add event listener to remove button
         removeButton.addEventListener('click', function() {
@@ -46,7 +49,4 @@ document.addEventListener('DOMContentLoaded', function() {
             addTask();
         }
     });
-
-    // Optionally call addTask initially if you want to have it run on page load
-    // addTask(); // Uncomment if you want to run addTask on DOMContentLoaded
 });
